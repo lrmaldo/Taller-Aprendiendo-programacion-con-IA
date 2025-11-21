@@ -1,125 +1,52 @@
-# 🤖 Taller: Aprendiendo Programación con IA
+# 🤖 Taller: Aprendizaje de Programación con IA
 
-Infografía interactiva para aprender a escribir prompts efectivos al programar con asistentes de IA.
+Plataforma interactiva y recursos para el taller de 4 días sobre programación asistida por Inteligencia Artificial.
 
-## 🌟 Características
+## 📅 Temario del Taller
 
-- **Anatomía del Prompt**: Aprende la estructura de un prompt perfecto
-- **Buenos vs Malos Ejemplos**: Comparaciones lado a lado
-- **Ejercicios Prácticos**: Niveles principiante, intermedio y avanzado
-- **Tips Avanzados**: Técnicas para mejorar tus resultados
+### Día 1: Introducción a la IA en Programación
+- Conceptos básicos de IA y Copilot.
+- Configuración del entorno (VS Code + Extensiones).
+- Primeros pasos: "Hola Mundo" asistido.
+- **Ejercicios**: Cálculos y manipulación de texto.
 
-## 🚀 Instalación
+### Día 2: Lógica de Programación
+- Estructuras de control: `if`, `else`, `switch`.
+- Bucles: `for`, `while`.
+- **Ejercicios**: Calculadora, Conversor de unidades, Menú interactivo.
 
-```bash
-# Clonar el repositorio
-git clone https://github.com/TU-USUARIO/Taller-Aprendiendo-programacion-con-IA.git
+### Día 3: Funciones y Organización
+- Creación y uso de funciones.
+- Buenas prácticas y código limpio.
+- Documentación automática con IA.
+- **Ejercicios**: Palíndromos, Cálculo de áreas y volúmenes.
 
-# Navegar al directorio
-cd Taller-Aprendiendo-programacion-con-IA
+### Día 4: Proyecto Final
+- Desarrollo guiado de una aplicación completa.
+- Integración de todos los conceptos.
+- **Proyecto**: Gestor de Tareas (To-Do List) en consola.
 
-# Instalar dependencias
-npm install
+## 🚀 Cómo usar este repositorio
 
-# Iniciar servidor de desarrollo
-npm run dev
-```
+1. **Clona el repositorio** o descarga el ZIP.
+2. Abre la carpeta en **Visual Studio Code**.
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Inicia la aplicación web para ver las guías:
+   ```bash
+   npm run dev
+   ```
+5. Los ejercicios prácticos se encuentran en la carpeta `public/ejercicios`. Puedes descargarlos desde la aplicación web o abrirlos directamente desde VS Code.
 
-## 📦 Scripts Disponibles
+## 🛠️ Requisitos Previos
 
-- `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm run preview` - Previsualiza la build de producción
-- `npm run deploy` - Despliega a GitHub Pages
-
-## 🌐 Desplegar a GitHub Pages
-
-### Configuración Inicial
-
-1. **Crear repositorio en GitHub** con el nombre: `Taller-Aprendiendo-programacion-con-IA`
-
-2. **Inicializar Git localmente**:
-```bash
-git init
-git add .
-git commit -m "Initial commit: Infografía de prompts para programación con IA"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/Taller-Aprendiendo-programacion-con-IA.git
-git push -u origin main
-```
-
-3. **Habilitar GitHub Pages**:
-   - Ve a Settings → Pages
-   - En "Source", selecciona "Deploy from a branch"
-   - En "Branch", selecciona `gh-pages` y carpeta `/ (root)`
-   - Guarda los cambios
-
-4. **Desplegar**:
-```bash
-npm run deploy
-```
-
-5. **Acceder a tu sitio**:
-   - URL: `https://TU-USUARIO.github.io/Taller-Aprendiendo-programacion-con-IA/`
-
-### Actualizaciones Futuras
-
-Para actualizar el sitio después de hacer cambios:
-
-```bash
-git add .
-git commit -m "Descripción de los cambios"
-git push origin main
-npm run deploy
-```
-
-## 🛠️ Tecnologías Utilizadas
-
-- **React 18** - Biblioteca de UI
-- **Vite** - Build tool y dev server
-- **Tailwind CSS** - Framework de estilos
-- **Lucide React** - Iconos
-- **gh-pages** - Deployment a GitHub Pages
-
-## 📝 Estructura del Proyecto
-
-```
-Taller-Aprendiendo-programacion-con-IA/
-├── src/
-│   ├── components/
-│   │   └── InfografiaPrompts.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── public/
-├── index.html
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── README.md
-```
-
-## 🎨 Personalización
-
-### Cambiar el nombre del repositorio
-
-Si decides usar un nombre diferente para tu repositorio, actualiza el campo `base` en `vite.config.js`:
-
-```javascript
-export default defineConfig({
-  plugins: [react()],
-  base: '/TU-NOMBRE-DE-REPO/',
-})
-```
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/) (para ejecutar el entorno local)
+- Una cuenta de GitHub
+- Acceso a GitHub Copilot (o extensión alternativa como Codeium/Tabnine)
 
 ## 📄 Licencia
 
-Este proyecto es de código abierto y está disponible para uso educativo.
-
-## 👨‍💻 Autor
-
-Taller de Aprendiendo Programación con IA
-
----
-
-¡Disfruta aprendiendo a programar con IA! 🚀
+Material educativo de libre distribución para el taller "Aprendiendo Programación con IA".

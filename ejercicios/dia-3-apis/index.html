@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de APIs</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; text-align: center; }
+        #resultado {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        img { max-width: 200px; }
+    </style>
+</head>
+<body>
+    <h1>Buscador de Pokémon</h1>
+    <input type="text" id="inputPokemon" placeholder="Escribe un nombre (ej: pikachu)">
+    <button id="btnBuscar">Buscar</button>
+
+    <div id="resultado">
+        <!-- Aquí aparecerá la info del Pokémon -->
+    </div>
+
+    <script src="api.js"></script>
+</body>
+</html>

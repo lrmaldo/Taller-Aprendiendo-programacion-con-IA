@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Terminal, Code2, Layers, Trophy, Home, Info } from 'lucide-react';
+import { BookOpen, Terminal, Code2, Layers, Trophy, Home, Info, Menu, X } from 'lucide-react';
 import InfografiaPrompts from './components/InfografiaPrompts';
 import Inicio from './components/Inicio';
 import Dia1 from './components/dias/Dia1';
@@ -11,6 +11,7 @@ import Dia4 from './components/dias/Dia4';
 function App() {
     const [currentView, setCurrentView] = useState('inicio');
     const [level, setLevel] = useState('basico'); // 'basico' | 'avanzado'
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const menuItems = [
         { id: 'inicio', label: 'Inicio', icon: Home },
@@ -84,19 +85,54 @@ function App() {
             </aside>
 
             {/* Mobile Header */}
-            <div className="md:hidden fixed w-full bg-indigo-900 text-white z-50 p-4 flex justify-between items-center shadow-md">
-                <h1 className="font-bold flex items-center gap-2">
-                    <Terminal className="text-yellow-400" size={20} />
-                    Taller IA Dev
-                </h1>
-                <select
-                    value={level}
-                    onChange={(e) => setLevel(e.target.value)}
-                    className="bg-indigo-800 text-white text-xs p-2 rounded border-none outline-none"
-                >
-                    <option value="basico">Básico</option>
-                    <option value="avanzado">Avanzado (POO)</option>
-                </select>
+            <div className="md:hidden fixed w-full bg-indigo-900 text-white z-50 flex flex-col shadow-md">
+                <div className="p-4 flex justify-between items-center">
+                    <div className="flex items-center gap-3">
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="text-indigo-100 hover:text-white"
+                        >
+                            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                        <h1 className="font-bold flex items-center gap-2">
+                            <Terminal className="text-yellow-400" size={20} />
+                            Taller IA Dev
+                        </h1>
+                    </div>
+                    <select
+                        value={level}
+                        onChange={(e) => setLevel(e.target.value)}
+                        className="bg-indigo-800 text-white text-xs p-2 rounded border-none outline-none"
+                    >
+                        <option value="basico">Básico</option>
+                        <option value="avanzado">Avanzado (POO)</option>
+                    </select>
+                </div>
+
+                {/* Mobile Menu Dropdown */}
+                {isMobileMenuOpen && (
+                    <div className="bg-indigo-900 border-t border-indigo-800">
+                        {menuItems.map(item => {
+                            const Icon = item.icon;
+                            return (
+                                <button
+                                    key={item.id}
+                                    onClick={() => {
+                                        setCurrentView(item.id);
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                    className={`w-full flex items-center gap-3 px-6 py-4 text-left transition-colors ${currentView === item.id
+                                        ? 'bg-indigo-800 border-l-4 border-yellow-400'
+                                        : 'hover:bg-indigo-800/50 text-indigo-100'
+                                        }`}
+                                >
+                                    <Icon size={20} />
+                                    {item.label}
+                                </button>
+                            );
+                        })}
+                    </div>
+                )}
             </div>
 
             {/* Main Content */}
